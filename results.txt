@@ -1,0 +1,9 @@
+Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8382F1 SCORE: 	 0.2944PRECISION: 	 0.2796RECALL: 	 0.3194Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8382F1 SCORE: 	 0.3200PRECISION: 	 0.3087RECALL: 	 0.3333Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8382F1 SCORE: 	 0.3066PRECISION: 	 0.3135RECALL: 	 0.3055Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8382F1 SCORE: 	 0.3132PRECISION: 	 0.3098RECALL: 	 0.3194Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8382F1 SCORE: 	 0.3027PRECISION: 	 0.3059RECALL: 	 0.3055Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8378F1 SCORE: 	 0.3025PRECISION: 	 0.3057RECALL: 	 0.3054Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.8345F1 SCORE: 	 0.2962PRECISION: 	 0.2950RECALL: 	 0.3049Initializing RF model top_feature_count = 5rf METRICS: 
+ACCURACY: 	 0.7534F1 SCORE: 	 0.1001PRECISION: 	 0.1339RECALL: 	 0.1132
