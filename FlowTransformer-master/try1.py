@@ -14,55 +14,46 @@ from implementations.input_encodings import *
 from implementations.pre_processings import StandardPreProcessing
 from implementations.transformers.basic_transformers import BasicTransformer
 from implementations.transformers.named_transformers import *
-
 from framework.model_input_specification import ModelInputSpecification
 
-
 encodings = [
-    NoInputEncoder(),
     RecordLevelEmbed(64),
-    CategoricalFeatureEmbed(EmbedLayerType.Dense, 16),
-    CategoricalFeatureEmbed(EmbedLayerType.Lookup, 16),
-    CategoricalFeatureEmbed(EmbedLayerType.Projection, 16),
     RecordLevelEmbed(64, project=True)
 ]
 
 classification_heads = [
-    LastTokenClassificationHead(),
-    FlattenClassificationHead(),
-    GlobalAveragePoolingClassificationHead(),
-    CLSTokenClassificationHead(),
     FeaturewiseEmbedding(project=False),
-    FeaturewiseEmbedding(project=True),
+    LastTokenClassificationHead()
 ]
 
 transformers: List[FunctionalComponent] = [
     BasicTransformer(2, 128, n_heads=2),
-    BasicTransformer(2, 128, n_heads=2, is_decoder=True),
-    GPTSmallTransformer(),
-    BERTSmallTransformer()
+    GPTSmallTransformer()
 ]
 
-flow_file_path = r"datset/"
+flow_file_path = r"dataset/"
 
 datasets = [
-    ("CSE_CIC_IDS", os.path.join(flow_file_path, "NF_CSECICID2018/data/NF-CSE-CIC-IDS2018-v2.csv"), NamedDatasetSpecifications.unified_flow_format, 0.01, EvaluationDatasetSampling.LastRows),
-    ("NSL-KDD", os.path.join(flow_file_path, "NSL-KDD.csv"), NamedDatasetSpecifications.nsl_kdd, 0.05, EvaluationDatasetSampling.RandomRows),
-    ("UNSW_NB15", os.path.join(flow_file_path, "NF-UNSW-NB15-v2.csv"), NamedDatasetSpecifications.unified_flow_format, 0.025, EvaluationDatasetSampling.LastRows)
+    ("CSE_CIC_IDS", os.path.join(flow_file_path, "NF_CSECICID2018/data/NF-CSE-CIC-IDS2018-v2.csv"), NamedDatasetSpecifications.cse_cic_ids_2018, 0.01, EvaluationDatasetSampling.RandomRows)
 ]
 
+print("Imported and defined")
 pre_processing = StandardPreProcessing(n_categorical_levels=32)
 
 # Define the transformer
 ft = FlowTransformer(pre_processing=pre_processing,
-                     input_encoding=encodings[1],
+                     input_encoding=encodings[0],
                      sequential_model=transformers[0],
-                     classification_head=classification_heads[4],
+                     classification_head=classification_heads[0],
                      params=FlowTransformerParameters(window_size=8, mlp_layer_sizes=[128], mlp_dropout=0.1))
+
+print("Defined flowtransformer, starting load")
 
 # Load the specific dataset
 dataset_name, dataset_path, dataset_specification, eval_percent, eval_method = datasets[0]
 ft.load_dataset(dataset_name, dataset_path, dataset_specification, evaluation_dataset_sampling=eval_method, evaluation_percent=eval_percent)
+
+print("Loaded dataset, building model")
 
 # Build the transformer model
 m = ft.build_model()

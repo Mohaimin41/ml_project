@@ -162,6 +162,8 @@ class FlowTransformer:
         training_mask = np.ones(len(dataset),  dtype=bool)
         eval_n = int(len(dataset) * evaluation_percent)
 
+        print(f"DEBOG: read dataset {dataset.shape}\n training mask len: {training_mask.shape}\n eval n : {eval_n}")
+
         if evaluation_dataset_sampling == EvaluationDatasetSampling.FilterColumn:
             if dataset.columns[-1] != specification.test_column:
                 raise Exception(f"Ensure that the 'test' ({specification.test_column}) column is the last column of the dataset being loaded, and that the name of this column is provided as part of the dataset specification")
@@ -327,6 +329,7 @@ class FlowTransformer:
 
         indices_train = np.argwhere(train_mask).reshape(-1)
         malicious_indices_train = np.argwhere(train_mask & y_mask & selectable_mask).reshape(-1)
+        print(f"DEBOG: ymask: {np.unique(y_mask, return_counts=True)}, \n select mask: {np.unique(selectable_mask, return_counts=True)}, \ntrain mask: {np.unique(train_mask, return_counts=True)}")
         legit_indices_train = np.argwhere(train_mask & ~y_mask & selectable_mask).reshape(-1)
 
         indices_test:np.ndarray = np.argwhere(~train_mask).reshape(-1)
