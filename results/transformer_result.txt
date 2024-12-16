@@ -1,0 +1,14 @@
+Model Name: bert
+Overall Validation Results:
+Mean Validation Accuracy: 0.5058
+Mean Precision: 0.0632
+Mean Recall: 0.1250
+Mean F1 Score: 0.0840
+Mean Validation Loss: 1.2645
+Model Name: distilbert
+Overall Validation Results:
+Mean Validation Accuracy: 0.8233
+Mean Precision: 0.4485
+Mean Recall: 0.4542
+Mean F1 Score: 0.4428
+Mean Validation Loss: 0.6321

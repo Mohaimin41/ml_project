@@ -1,0 +1,49 @@
+Model Name: bert
+Overall Validation Results:
+Mean Validation Accuracy: 0.8952
+Mean Precision: 0.1256
+Mean Recall: 0.1485
+Mean F1 Score: 0.1345
+Mean Validation Loss: 0.4310
+Model Name: distilbert
+Overall Validation Results:
+Mean Validation Accuracy: 0.9302
+Mean Precision: 0.2605
+Mean Recall: 0.2996
+Mean F1 Score: 0.2725
+Mean Validation Loss: 0.3026
+Model Name: roberta
+Overall Validation Results:
+Mean Validation Accuracy: 0.8907
+Mean Precision: 0.1113
+Mean Recall: 0.1250
+Mean F1 Score: 0.1178
+Mean Validation Loss: 0.4766
+Model Name: electra
+Overall Validation Results:
+Mean Validation Accuracy: 0.8907
+Mean Precision: 0.1113
+Mean Recall: 0.1250
+Mean F1 Score: 0.1178
+Mean Validation Loss: 0.4731
+Model Name: spanbert
+Overall Validation Results:
+Mean Validation Accuracy: 0.8907
+Mean Precision: 0.1113
+Mean Recall: 0.1250
+Mean F1 Score: 0.1178
+Mean Validation Loss: 0.4734
+Model Name: codebert
+Overall Validation Results:
+Mean Validation Accuracy: 0.8907
+Mean Precision: 0.1113
+Mean Recall: 0.1250
+Mean F1 Score: 0.1178
+Mean Validation Loss: 0.4746
+Model Name: gpt2
+Overall Validation Results:
+Mean Validation Accuracy: 0.9940
+Mean Precision: 0.7657
+Mean Recall: 0.7120
+Mean F1 Score: 0.7192
+Mean Validation Loss: 0.0337
