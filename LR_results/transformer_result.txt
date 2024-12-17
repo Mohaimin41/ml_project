@@ -1,0 +1,40 @@
+Model Name: gpt2lr: 4.9999999999999996e-06    
+Overall Validation Results:
+Mean Validation Accuracy: 0.9752
+Mean Precision: 0.8240
+Mean Recall: 0.7654
+Mean F1 Score: 0.7738
+Mean Validation Loss: 0.1058
+
+Model Name: gpt2lr: 1.5811388300841894e-05    
+Overall Validation Results:
+Mean Validation Accuracy: 0.9779
+Mean Precision: 0.8555
+Mean Recall: 0.7727
+Mean F1 Score: 0.7846
+Mean Validation Loss: 0.0943
+
+Model Name: gpt2lr: 4.9999999999999996e-05    
+Overall Validation Results:
+Mean Validation Accuracy: 0.9780
+Mean Precision: 0.8637
+Mean Recall: 0.7730
+Mean F1 Score: 0.7866
+Mean Validation Loss: 0.0890
+
+Model Name: gpt2lr: 0.00015811388300841894    
+Overall Validation Results:
+Mean Validation Accuracy: 0.9790
+Mean Precision: 0.8641
+Mean Recall: 0.7756
+Mean F1 Score: 0.7891
+Mean Validation Loss: 0.0906
+
+Model Name: gpt2lr: 0.0004999999999999999    
+Overall Validation Results:
+Mean Validation Accuracy: 0.9781
+Mean Precision: 0.8625
+Mean Recall: 0.7757
+Mean F1 Score: 0.7906
+Mean Validation Loss: 0.0909
+
